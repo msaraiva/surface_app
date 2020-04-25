@@ -20,10 +20,10 @@ defmodule Counter do
   end
 
   def handle_event("inc", _, socket) do
-    {:noreply, update(socket, :count, & &1 + 1)}
+    {:noreply, update(socket, :count, &(&1 + 1))}
   end
 
   def handle_event("dec", _, socket) do
-    {:noreply, update(socket, :count, & &1 - 1)}
+    {:noreply, update(socket, :count, &(&1 - 1))}
   end
 end
