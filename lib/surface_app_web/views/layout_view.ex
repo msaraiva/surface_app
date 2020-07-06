@@ -12,7 +12,7 @@ defmodule SurfaceAppWeb.LayoutView do
         <title>Surface App</title>
         <link rel="stylesheet" href={{ Routes.static_path(@conn, "/css/bulma-v0.8.0.css") }} />
         <script src={{ Routes.static_path(@conn, "/js/phoenix-v1.4.16.min.js") }}></script>
-        <script src={{ Routes.static_path(@conn, "/js/phoenix_live_view-v0.11.1.min.js") }}></script>
+        <script src={{ Routes.static_path(@conn, "/js/phoenix_live_view-v0.13.3.min.js") }}></script>
       </head>
       <body>
         <section class="hero is-info"><div class="hero-body" style="padding: 2.5rem 1.5rem">
