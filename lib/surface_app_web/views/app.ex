@@ -24,7 +24,9 @@ defmodule SurfaceAppWeb.App do
         </div>
         <div class="column">
           <Card title="Card 2">
-            <Counter id="counter"/>
+            <Counter id="counter1"/>
+            <br>
+            <Counter id="counter2"/>
             <br>
             An example of a stateful <strong>Live Component</strong>.
           </Card>

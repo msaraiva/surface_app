@@ -38,7 +38,8 @@ defmodule SurfaceApp.MixProject do
       {:floki, ">= 0.0.0", only: :test},
       {:surface, "~> 0.1.0-alpha.2"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:sass, "~> 1.0"}
     ]
   end
 end
