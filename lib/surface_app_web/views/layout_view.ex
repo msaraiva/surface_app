@@ -11,11 +11,12 @@ defmodule SurfaceAppWeb.LayoutView do
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Surface App</title>
         <link rel="stylesheet" href={{ Routes.static_path(@conn, "/css/bulma-v0.8.0.css") }} />
+        <link rel="stylesheet" href={{ Routes.static_path(@conn, "/css/components.css") }} />
         <script src={{ Routes.static_path(@conn, "/js/phoenix-v1.4.16.min.js") }}></script>
         <script src={{ Routes.static_path(@conn, "/js/phoenix_live_view-v0.13.3.min.js") }}></script>
       </head>
       <body>
-        <section class="hero is-info"><div class="hero-body" style="padding: 2.5rem 1.5rem">
+        <section class="hero is-info"><div class="hero-body" style="padding: 1.0rem">
           <div class="container">
             <h1 class="title">
               Surface UI
@@ -25,7 +26,7 @@ defmodule SurfaceAppWeb.LayoutView do
             </h2>
           </div>
         </div></section>
-        <section class="section">
+        <section class="section" style="padding: 0.4rem">
           <div class="container">
             {{ @inner_content }}
           </div>

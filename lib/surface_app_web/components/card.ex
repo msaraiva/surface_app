@@ -1,5 +1,5 @@
-defmodule SurfaceAppWeb.Card do
-  use Surface.Component
+defmodule Components.Card do
+  use Surface.LiveComponent
 
   @doc "The title"
   property title, :string, required: true
@@ -10,10 +10,26 @@ defmodule SurfaceAppWeb.Card do
   @doc "The footer"
   slot footer
 
+  style do
+    scss """
+    .card-footer-item {
+      font-size: 15px;
+
+      &:not(:last-child) {
+        border-right: 1px solid #dbdbdb;
+      }
+    }
+
+    .card-header, .card-footer {
+      background-color: #f5f5f5;
+    }
+    """
+  end
+
   def render(assigns) do
     ~H"""
     <div class="card">
-      <header class="card-header" style="background-color: #f5f5f5">
+      <header class="card-header">
         <p class="card-header-title">
           {{ @title }}
         </p>
@@ -23,12 +39,8 @@ defmodule SurfaceAppWeb.Card do
           <slot/>
         </div>
       </div>
-      <footer class="card-footer" style="background-color: #f5f5f5">
-        <slot name="footer">
-          <div class="card-footer-item">
-            No footer defined. Using a fallback :)
-          </div>
-        </slot>
+      <footer :if={{ @footer }} class="card-footer">
+        <slot name="footer"/>
       </footer>
     </div>
     """

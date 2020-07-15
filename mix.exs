@@ -7,7 +7,7 @@ defmodule SurfaceApp.MixProject do
       version: "0.1.0",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix] ++ Mix.compilers(),
+      compilers: [:phoenix] ++ Mix.compilers() ++ [:surface],
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -36,10 +36,9 @@ defmodule SurfaceApp.MixProject do
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:floki, ">= 0.0.0", only: :test},
-      {:surface, "~> 0.1.0-alpha.2"},
+      {:surface, git: "https://github.com/msaraiva/surface.git", branch: "scoped-styles"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"},
-      {:sass, "~> 1.0"}
+      {:plug_cowboy, "~> 2.0"}
     ]
   end
 end
