@@ -8,10 +8,10 @@ defmodule Counter do
     <div>
       <h1 class="title">Count: {{ @count }}</h1>
       <div>
-        <button class="button is-info" :on-phx-click="dec">
+        <button class="button is-info" :on-click="dec">
           -
         </button>
-        <button class="button is-info" :on-phx-click="inc">
+        <button class="button is-info" :on-click="inc">
           +
         </button>
       </div>

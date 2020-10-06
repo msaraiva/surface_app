@@ -5,6 +5,8 @@ defmodule SurfaceApp.Application do
 
   def start(_type, _args) do
     children = [
+      # Start the PubSub system
+      {Phoenix.PubSub, name: SurfaceApp.PubSub},
       SurfaceAppWeb.Endpoint
     ]
 

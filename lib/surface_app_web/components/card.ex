@@ -2,7 +2,7 @@ defmodule SurfaceAppWeb.Card do
   use Surface.Component
 
   @doc "The title"
-  property title, :string, required: true
+  prop title, :string, required: true
 
   @doc "The main content"
   slot default, required: true

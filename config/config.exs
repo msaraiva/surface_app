@@ -5,7 +5,7 @@ config :surface_app, SurfaceAppWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "UIegzxon3DL/eIG2KV0IyxHTbSEtw3y2FmtFEEa1/rF62pYoUkbaixV8s9XxdoJw",
   render_errors: [view: SurfaceAppWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: SurfaceApp.PubSub, adapter: Phoenix.PubSub.PG2],
+  pubsub_server: SurfaceApp.PubSub,
   live_view: [
     signing_salt: "Pc9Ia8dj77Ti3S3SYOv5FmwtdH81NWDJ"
   ]
